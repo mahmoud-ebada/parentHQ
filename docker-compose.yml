@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  
+  php:
+    container_name: ParentHQ
+    build:
+      context: ./docker/web
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www/parenthq
+    ports: ["9000:80"]
+  
